@@ -1,1 +1,0 @@
-# residenciatic18_dotnet
