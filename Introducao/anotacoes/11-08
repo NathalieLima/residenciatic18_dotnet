@@ -1,0 +1,30 @@
+- pd colocar tudo lá
+
+#region
+
+- as teóricas: markdown
+
+tipos de dados principais: int,
+
+apesar de formato parecido c c++, em c# tudo é classe. n existe nada nele que n seja classe, e por tudo ser classe, temos metodos associados a essas classes; tem mta coisa ja pronta
+
+assembly converte automaticamente no tipo nativo do seu sistema operacional
+
+antes de implementar algo básico, ver se já n tá pronto; ver documentaçao
+
+em c++ era long int, aqui só long
+
+pega parte da negativa e joga pra positivo, entao dobra
+
+### conversoes entre tipos
+
+ideal: implicita ou utilizando Parse
+posso converter do menor pro maior, n o contrario
+mas se eu tiver ctz que o tipo maior cabe no menor (ex: long 10 pra int), aí posso usar o Parse
+
+pode ter conversao c dados n numericos (string "100" pra int, por ex)
+- manipular exceçao: se tentar converter um n numero em numero, aí tenho que usar tryparse pra n interromper; erro em tempo de execuçao, os piores de serem tratados
+
+### operadores
+
+sao os mesmos
