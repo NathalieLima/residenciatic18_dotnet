@@ -1,6 +1,6 @@
 ## COMANDOS PARA .NET SDK
 
-### --version
+### dotnet --version
 
 Imprime a versão do SDK do .NET Core em uso. Se houver uma versão mais nova, faz o download instala-a automaticamente.
 
