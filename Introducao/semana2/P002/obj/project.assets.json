@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/nathalielima/teste/residenciatic18_dotnet/Introducao/semana2/exemplos-sala/sld03/exemplos-aula.csproj",
-      "projectName": "exemplos-aula",
-      "projectPath": "/home/nathalielima/teste/residenciatic18_dotnet/Introducao/semana2/exemplos-sala/sld03/exemplos-aula.csproj",
+      "projectUniqueName": "/home/nathalielima/teste/residenciatic18_dotnet/Introducao/semana2/P002/P002.csproj",
+      "projectName": "P002",
+      "projectPath": "/home/nathalielima/teste/residenciatic18_dotnet/Introducao/semana2/P002/P002.csproj",
       "packagesPath": "/home/nathalielima/.nuget/packages/",
-      "outputPath": "/home/nathalielima/teste/residenciatic18_dotnet/Introducao/semana2/exemplos-sala/sld03/obj/",
+      "outputPath": "/home/nathalielima/teste/residenciatic18_dotnet/Introducao/semana2/P002/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/nathalielima/.nuget/NuGet/NuGet.Config"
