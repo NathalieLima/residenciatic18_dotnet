@@ -1,0 +1,15 @@
+/home/nathalielima/teste/residenciatic18_dotnet/Introducao/semana3/exemplos-sala/sld06/bin/Debug/net7.0/sld06
+/home/nathalielima/teste/residenciatic18_dotnet/Introducao/semana3/exemplos-sala/sld06/bin/Debug/net7.0/sld06.deps.json
+/home/nathalielima/teste/residenciatic18_dotnet/Introducao/semana3/exemplos-sala/sld06/bin/Debug/net7.0/sld06.runtimeconfig.json
+/home/nathalielima/teste/residenciatic18_dotnet/Introducao/semana3/exemplos-sala/sld06/bin/Debug/net7.0/sld06.dll
+/home/nathalielima/teste/residenciatic18_dotnet/Introducao/semana3/exemplos-sala/sld06/bin/Debug/net7.0/sld06.pdb
+/home/nathalielima/teste/residenciatic18_dotnet/Introducao/semana3/exemplos-sala/sld06/obj/Debug/net7.0/sld06.csproj.AssemblyReference.cache
+/home/nathalielima/teste/residenciatic18_dotnet/Introducao/semana3/exemplos-sala/sld06/obj/Debug/net7.0/sld06.GeneratedMSBuildEditorConfig.editorconfig
+/home/nathalielima/teste/residenciatic18_dotnet/Introducao/semana3/exemplos-sala/sld06/obj/Debug/net7.0/sld06.AssemblyInfoInputs.cache
+/home/nathalielima/teste/residenciatic18_dotnet/Introducao/semana3/exemplos-sala/sld06/obj/Debug/net7.0/sld06.AssemblyInfo.cs
+/home/nathalielima/teste/residenciatic18_dotnet/Introducao/semana3/exemplos-sala/sld06/obj/Debug/net7.0/sld06.csproj.CoreCompileInputs.cache
+/home/nathalielima/teste/residenciatic18_dotnet/Introducao/semana3/exemplos-sala/sld06/obj/Debug/net7.0/sld06.dll
+/home/nathalielima/teste/residenciatic18_dotnet/Introducao/semana3/exemplos-sala/sld06/obj/Debug/net7.0/refint/sld06.dll
+/home/nathalielima/teste/residenciatic18_dotnet/Introducao/semana3/exemplos-sala/sld06/obj/Debug/net7.0/sld06.pdb
+/home/nathalielima/teste/residenciatic18_dotnet/Introducao/semana3/exemplos-sala/sld06/obj/Debug/net7.0/sld06.genruntimeconfig.cache
+/home/nathalielima/teste/residenciatic18_dotnet/Introducao/semana3/exemplos-sala/sld06/obj/Debug/net7.0/ref/sld06.dll
