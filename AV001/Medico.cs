@@ -1,9 +1,15 @@
-class Medico 
+class Medico : Pessoa
 {
-    private string nome;
-    private DateTime data_nascimento;
-    private string CPF;
     private string CRM;
 
-    
+    public string CRM 
+    { 
+        get { return this.CRM; }
+        set 
+        {
+
+        }
+    }
+
+
 }
