@@ -12,10 +12,6 @@ static class Utilities
         return options.Length;
     }
 
-    public static bool isUniqueValue(string value, var list) {
-        return list.Any(item => item == value);
-    }
-
     public static var isValidCPF(string cpf, var list) {
         if (cpf.Length != 11) {
             var tupla_erro = (error: true; message: "Um CPF deve ter 11 caracteres.");
@@ -28,14 +24,6 @@ static class Utilities
                 var tupla_erro = (error: true; message: "Um CPF deve ser composto somente por números.");
 
                 return tupla_erro;
-            }
-            else 
-            {
-                if ( !isUniqueValue(cpf, list) ) {
-                    var tupla_erro = (error: true; message: "Um CPF igual a esse já foi cadastrado.");
-
-                    return tupla_erro;
-                }
             }
         }
 
