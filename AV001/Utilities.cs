@@ -30,6 +30,10 @@ static class Utilities
         return {erro: false; message: ""};
     }
 
+    public static isUniqueValue(string value, var list) {
+        return list.Any(item => item == value);
+    }
+
     public static int calcularIdade(DateTime data_nascimento) {
         return 10;
     } 
