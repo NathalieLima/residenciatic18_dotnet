@@ -2,10 +2,14 @@ namespace Classes;
 
 static class Utilities 
 {
-    static void montarMenu(List<string> options) {
+    public static void montarMenu(List<string> options) {
         options.Select((x, index) => new { Index = index, Option = x })
         .ToList()
         .ForEach(item => Console.WriteLine($"{item.Index}. {item.Option}"));
+    }
+
+    public static int getMenuLength(List<string> options) {
+        return options.Length;
     }
 
     public static bool isValidCPF(string cpf) {

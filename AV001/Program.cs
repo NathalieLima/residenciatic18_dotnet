@@ -1,4 +1,7 @@
 ﻿using Classes;
+using System.Globalization;
+CultureInfo.CurrentCulture = CultureInfo.CreateSpecificCulture("pt-BR");
+
 
 List<string> menu_options = new List<string>() 
 {
@@ -17,5 +20,19 @@ do {
     Console.Write($"Sua opção: ");
     user_option = Console.ReadLine();
     
+    switch (user_option) 
+    {
+        case 0:
+            Console.WriteLine($"Fim do programa!");
+            break;
+
+        case 1:
+            
+        
+        default:
+            Console.WriteLine($"Insira um número entre 0 e {Utilities.getMenuLength(menu_options)}");
+            
+            
+    }
 
 } while (user_option != 0);
