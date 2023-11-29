@@ -1,0 +1,15 @@
+/home/nathalielima/residenciatic18_dotnet/Introducao/instrucoes-praticas/P003/obj/Debug/net7.0/P003.csproj.AssemblyReference.cache
+/home/nathalielima/residenciatic18_dotnet/Introducao/instrucoes-praticas/P003/obj/Debug/net7.0/P003.GeneratedMSBuildEditorConfig.editorconfig
+/home/nathalielima/residenciatic18_dotnet/Introducao/instrucoes-praticas/P003/obj/Debug/net7.0/P003.AssemblyInfoInputs.cache
+/home/nathalielima/residenciatic18_dotnet/Introducao/instrucoes-praticas/P003/obj/Debug/net7.0/P003.AssemblyInfo.cs
+/home/nathalielima/residenciatic18_dotnet/Introducao/instrucoes-praticas/P003/obj/Debug/net7.0/P003.csproj.CoreCompileInputs.cache
+/home/nathalielima/residenciatic18_dotnet/Introducao/instrucoes-praticas/P003/bin/Debug/net7.0/P003
+/home/nathalielima/residenciatic18_dotnet/Introducao/instrucoes-praticas/P003/bin/Debug/net7.0/P003.deps.json
+/home/nathalielima/residenciatic18_dotnet/Introducao/instrucoes-praticas/P003/bin/Debug/net7.0/P003.runtimeconfig.json
+/home/nathalielima/residenciatic18_dotnet/Introducao/instrucoes-praticas/P003/bin/Debug/net7.0/P003.dll
+/home/nathalielima/residenciatic18_dotnet/Introducao/instrucoes-praticas/P003/bin/Debug/net7.0/P003.pdb
+/home/nathalielima/residenciatic18_dotnet/Introducao/instrucoes-praticas/P003/obj/Debug/net7.0/P003.dll
+/home/nathalielima/residenciatic18_dotnet/Introducao/instrucoes-praticas/P003/obj/Debug/net7.0/refint/P003.dll
+/home/nathalielima/residenciatic18_dotnet/Introducao/instrucoes-praticas/P003/obj/Debug/net7.0/P003.pdb
+/home/nathalielima/residenciatic18_dotnet/Introducao/instrucoes-praticas/P003/obj/Debug/net7.0/P003.genruntimeconfig.cache
+/home/nathalielima/residenciatic18_dotnet/Introducao/instrucoes-praticas/P003/obj/Debug/net7.0/ref/P003.dll
