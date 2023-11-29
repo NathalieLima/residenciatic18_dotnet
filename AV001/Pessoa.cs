@@ -8,7 +8,7 @@ class Pessoa
 
     public string Nome { get; set; }
     
-    public DateTime DataNascimento { get; set; }
+    public virtual DateTime DataNascimento { get; set; }
 
     public string CPF 
     { 

@@ -13,6 +13,10 @@ List<string> menu_options = new List<string>()
     "Médicos e Pacientes aniversariantes do mês informado"
 }; 
 int user_option;
+List<Medico> medicos_list = new List<Medico>();
+List<Paciente> pacientes_list = new List<Paciente>();
+Medico novo_medico = new Medico();
+Medico novo_paciente = new Paciente();
 
 do {
     Utilities.montarMenu(menu_options);
@@ -27,8 +31,7 @@ do {
             break;
 
         case 1:
-            Medico novo_medico = new Medico();
-            novo_medico
+            novo_medico = 
             
         
         default:
