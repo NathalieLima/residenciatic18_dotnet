@@ -8,20 +8,20 @@ class Paciente
     private string CRM;
     private List<string> sintomas;
 
-
     public string Nome { get; set; }
     public DateTime DataNascimento { get; set; }
     public string CPF 
     { 
-        get;
+        get { return this.CPF; }
         set 
         {
-            try {
-                isValidCPF(value);
+            var tupla_erro = isValidCPF(value);
+
+            if ( !tupla_erro.erro ) {
+                this.CPF = value;
+            } else {
+                throw new Exception(tupla_erro.message);
             }
-            catch (Exception error) {
-                return error.Message;
-            } 
         }
     }
     public int MyProperty { get; set; }

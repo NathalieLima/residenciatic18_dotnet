@@ -27,6 +27,8 @@ do {
             break;
 
         case 1:
+            Medico novo_medico = new Medico();
+            novo_medico
             
         
         default:

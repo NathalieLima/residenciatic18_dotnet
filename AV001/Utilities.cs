@@ -12,19 +12,25 @@ static class Utilities
         return options.Length;
     }
 
-    public static bool isValidCPF(string cpf) {
+    public static var isValidCPF(string cpf) {
         if (cpf.Length != 11) {
-            throw new Exception("Um CPF deve ter 11 caracteres.");
-            return false;
+            var tupla_erro = (error: true; message: "Um CPF deve ter 11 caracteres.");
+
+            return tupla_erro;
         }
         else 
         {
             if ( !cpf.All(char.IsDigit) ) {
-                throw new Exception("Um CPF deve ser composto somente por números.")
-                return false;
+                 var tupla_erro = (error: true; message: "Um CPF deve ser composto somente por números.");
+
+                return tupla_erro;
             }
         }
 
-        return true;
+        return {erro: false; message: ""};
     }
+
+    public static int calcularIdade(DateTime data_nascimento) {
+        return 10;
+    } 
 }
