@@ -16,7 +16,7 @@ int user_option;
 List<Medico> medicos_list = new List<Medico>();
 List<Paciente> pacientes_list = new List<Paciente>();
 Medico novo_medico = new Medico();
-Medico novo_paciente = new Paciente();
+Paciente novo_paciente = new Paciente();
 
 do {
     Utilities.montarMenu(menu_options);
@@ -30,8 +30,8 @@ do {
             Console.WriteLine($"Fim do programa!");
             break;
 
-        case 1:
-            novo_medico = 
+        // case 1:
+        //     novo_medico
             
         
         default:

@@ -1,4 +1,4 @@
-using Utilities;
+namespace Classes;
 
 class Paciente : Pessoa
 {
@@ -22,7 +22,7 @@ class Paciente : Pessoa
         }
     }
 
-    public string sexo 
+    public string Sexo 
     {
         get { return this.sexo; }
         set 
@@ -35,5 +35,5 @@ class Paciente : Pessoa
         }
     }
 
-    public string sintomas { get; set; }
+    public string Sintomas { get; set; }
 }

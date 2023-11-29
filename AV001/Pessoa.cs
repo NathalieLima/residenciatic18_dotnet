@@ -1,10 +1,10 @@
-using Utilities;
+namespace Classes;
 
 class Pessoa
 {
     private string nome;
     private DateTime data_nascimento;
-    private string CPF;
+    private string cpf;
 
     public string Nome { get; set; }
     
@@ -12,13 +12,13 @@ class Pessoa
 
     public string CPF 
     { 
-        get { return this.CPF; }
+        get { return this.cpf; }
         set 
         {
             var tupla_erro = isValidCPF(value);
 
             if ( !tupla_erro.erro ) {
-                this.CPF = value;
+                this.cpf = value;
             } else {
                 throw new Exception(tupla_erro.message);
             }

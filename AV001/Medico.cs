@@ -2,7 +2,7 @@ namespace Classes;
 
 class Medico : Pessoa
 {
-    private string CRM;
+    private string crm;
 
     public override DateTime DataNascimento 
     {
@@ -23,13 +23,13 @@ class Medico : Pessoa
 
     public string CRM 
     { 
-        get { return this.CRM; }
+        get { return this.crm; }
         set 
         {
             if ( isEmptyField(value) ) {
                 throw new Exception("Este campo não aceita valores vazios.");
             } else {
-                this.CRM = value;
+                this.crm = value;
             }
         }
     }
