@@ -16,23 +16,26 @@ public static class Utilities
     public static void getProductsBelowLimit(int limit, List<Product> products_list) 
     {
         products_list.Where(item => item.Amount < limit)
+        .ToList()
         .ForEach(item => Console.WriteLine($"{products_list.IndexOf(item)}. {item.Name} - {item.Amount} item(ns)"));
     }
     public static void getProductsMinMax(int min, int max, List<Product> products_list) {
-        products_list.Where(item => item.Amount >= min && item.Amount <= max);
-        
-        //.ForEach(item => Console.WriteLine($"{products_list.IndexOf(item)}. {item.Name} - {item.Amount} item(ns)"));
+        products_list.Where(item => item.Amount >= min && item.Amount <= max)
+        .ToList()
+        .ForEach(item => Console.WriteLine($"{products_list.IndexOf(item)}. {item.Name} - {item.Amount} item(ns)"));
     }
 
     public static void getTotalAmountAll(List<Product> products_list) {
-        //List<Product> total_list = products_list.Select(item => item.Amount * item.Price);
-        foreach (var ola in products_list.Select(item => item.Amount * item.Price)) {
-            Console.WriteLine($"{ola}");
-            
-        }
-        double sum_total = 12.5;//total_list.Sum();
+        
+        var total_list = products_list.Select(item => item.Amount * item.Price);
+        double total_sum = total_list.Sum();
 
-        //products_list.ForEach(item => Console.WriteLine($"Valor total de {item.Name} - {total_list[products_list.IndexOf(item)]} unidades monetárias"));
-        Console.WriteLine($@"Valor total do estoque: {sum_total}");
+        
+        
+        Console.WriteLine($"Valor total do estoque: {total_sum}");
+    }
+
+    public static bool isExistingCode(string code, List<Product> products_list) {
+        return products_list.Any(item => item.Code == code);
     }
 }

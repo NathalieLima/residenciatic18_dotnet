@@ -2,12 +2,14 @@ using TesteNameSpace;
 using TesteNameSpace.Exceptions;
 
 List<string> menu_options = new List<string>();
+bool flag = false;
 string code, name;
 double price;
 int user_option = 0,
     amount,
     min_amount,
-    max_amount;
+    max_amount,
+    product_index;
 Product product = new Product();
 List<Product> products_list = new List<Product>();
 
@@ -20,11 +22,12 @@ do {
         "Gerar relatórios"
     }.ToList();
     Utilities.montarMenu(menu_options);
-    Console.WriteLine("Sua opção: ");
+    Console.Write("\nSua opção: ");
     user_option = int.Parse(Console.ReadLine());
 
-    Console.WriteLine($"\n{menu_options[user_option].ToUpper()}\n");
-    
+    try {
+        Console.WriteLine($"\nOPÇÃO {menu_options[user_option].ToUpper()}\n");
+    } catch {}
     
     switch (user_option)
     {
@@ -33,8 +36,18 @@ do {
             break;
             
         case 1: // Cadastro de produto
-            Console.WriteLine($"Informe o código: ");
-            code = Console.ReadLine();
+            do {
+                Console.Write($"Informe o código: ");
+                code = Console.ReadLine();
+                flag = false;
+
+                if ( Utilities.isExistingCode(code, products_list) ) {
+                    Console.WriteLine("Este código já existe, entre com um diferente!");
+                    
+                    flag = true;
+                }
+            } while (flag);
+            
 
             // try {
             //     product.setName(code);
@@ -43,13 +56,13 @@ do {
             //     Console.WriteLine(ex.Message);
             // }
 
-            Console.WriteLine($"Informe o nome: ");
+            Console.Write($"Informe o nome: ");
             name = Console.ReadLine();
 
-            Console.WriteLine($"Informe a quantidade: ");
+            Console.Write($"Informe a quantidade: ");
             amount = int.Parse(Console.ReadLine());
 
-            Console.WriteLine($"Informe o preço: ");
+            Console.Write($"Informe o preço: ");
             price = double.Parse(Console.ReadLine());
 
             product.Name = name;
@@ -59,27 +72,24 @@ do {
 
             products_list.Add(product);
 
-            Console.WriteLine($"Este produto foi cadastrado com sucesso!");
+            Console.WriteLine($"\nEste produto foi cadastrado com sucesso!");
             break;
 
         case 2: // Consulta de produto
-            Console.WriteLine($"Informe o código: ");
+            Console.Write($"Informe o código: ");
             code = Console.ReadLine();
 
-            product = getProductByCode(code, products_list);
+            try {
+                product = Utilities.getProductByCode(code, products_list);
 
                 Console.WriteLine($@"DADOS DO PRODUTO
                 Código: {product.Code}
                 Nome: {product.Name}
                 Quantidade: {product.Amount}
                 Preço: {product.Price}");
-
-            // try {
-                
-                
-            // } catch () {
-            //     Console.WriteLine($"Não existe produto com este código no estoque.");
-            // }
+            } catch (InvalidOperationException er) {
+                Console.WriteLine($"Não existe produto com este código no estoque.");
+            }
             
             break;
 
@@ -87,25 +97,25 @@ do {
             Console.WriteLine($"Informe o código: ");
             code = Console.ReadLine();
 
-            product = getProductByCode(code, products_list);
+            product = Utilities.getProductByCode(code, products_list);
 
-            // try {
-            //     
+            try {
+                product = Utilities.getProductByCode(code, products_list);
 
-                
-            // } catch () {
-            //     Console.WriteLine($"Não existe produto com este código no estoque.");
-            // }
+                Console.WriteLine($"Informe a nova quantidade: ");
+                amount = int.Parse(Console.ReadLine());
 
-            Console.WriteLine($"Informe a nova quantidade: ");
-            amount = int.Parse(Console.ReadLine());
-
-            if ( amount > product.Amount ) {
-                Console.WriteLine($"A quantidade fornecida é superior à quantidade presente em estoque.");
-                
-            } else {
-                Console.WriteLine("Estoque do produto atualizado com sucesso!");
-                
+                if ( amount > product.Amount ) {
+                    Console.WriteLine($"A quantidade fornecida é superior à quantidade presente em estoque.");
+                    
+                } else {
+                    product_index = products_list.IndexOf(product);
+                    products_list[product_index].Amount = amount;
+                    Console.WriteLine("Estoque do produto atualizado com sucesso!");
+                }
+            } 
+            catch (InvalidOperationException er) {
+                Console.WriteLine($"Não existe produto com este código no estoque.");
             }
 
             break;
@@ -117,53 +127,56 @@ do {
                             "Lista de produtos com valores mínimo e máximo",
                             "Valor total do estoque e valor total de cada produto"}
                             .ToList();
-            Utilities.montarMenu(menu_options);
-            
-            Console.WriteLine($"Sua opção: ");
-            user_option = int.Parse(Console.ReadLine());
-            
-            switch (user_option)
-            {
-                case 0:
-                    Console.WriteLine($"Retornando...");
-                    break;
-                    
-                case 1:
-                    Console.WriteLine($"Informe a nova quantidade: ");
-                    amount = int.Parse(Console.ReadLine());
 
-                    Utilities.getProductsBelowLimit(amount, products_list);
+            do {
+                Utilities.montarMenu(menu_options);
+                Console.Write($"\nSua opção: ");
+                user_option = int.Parse(Console.ReadLine());
 
-                    break;
+                switch (user_option)
+                {
+                    case 0:
+                        Console.WriteLine($"Retornando...");
+                        break;
+                        
+                    case 1:
+                        Console.WriteLine($"Informe a nova quantidade: ");
+                        amount = int.Parse(Console.ReadLine());
 
-                case 2:
-                    Console.WriteLine($"Informe o mínimo: ");
-                    min_amount = int.Parse(Console.ReadLine());
+                        Utilities.getProductsBelowLimit(amount, products_list);
 
-                    Console.WriteLine($"Informe o máximo: ");
-                    max_amount = int.Parse(Console.ReadLine());
+                        break;
 
-                    Utilities.getProductsMinMax(min_amount, max_amount, products_list);
+                    case 2:
+                        Console.WriteLine($"Informe o mínimo: ");
+                        min_amount = int.Parse(Console.ReadLine());
 
-                    break;
+                        Console.WriteLine($"Informe o máximo: ");
+                        max_amount = int.Parse(Console.ReadLine());
 
-                case 3:
-                    getTotalAmountAll(products_list);
+                        Utilities.getProductsMinMax(min_amount, max_amount, products_list);
 
-                    break;
+                        break;
 
-                default:
-                    Console.WriteLine($"Insira um valor entre 0 e {menu_options.Count}");
+                    case 3:
+                        Utilities.getTotalAmountAll(products_list);
 
-                    break;
-            }
-            
-            break;
+                        break;
+
+                    default:
+                        Console.WriteLine($"Insira um valor entre 0 e {menu_options.Count}");
+
+                        break;
+                }
+                
+               
+            } while (user_option != 0);
+
+            break;    
 
         default:
             Console.WriteLine($"Insira um número entre 0 e {menu_options.Count}");
             break;
     }
-
     Console.WriteLine(); // Quebrar linha por formatação
 } while (user_option != 0);
