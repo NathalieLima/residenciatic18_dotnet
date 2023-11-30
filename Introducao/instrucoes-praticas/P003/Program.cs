@@ -2,15 +2,16 @@ using TesteNameSpace;
 using TesteNameSpace.Exceptions;
 
 List<string> menu_options = new List<string>();
-bool flag = false;
+bool flag = false,
+     finish_program = false;
 string code, name;
 double price;
 int user_option = 0,
+    io_amount,
     amount,
     min_amount,
     max_amount,
     product_index;
-Product product = new Product();
 List<Product> products_list = new List<Product>();
 
 do {
@@ -33,9 +34,12 @@ do {
     {
         case 0:
             Console.WriteLine($"Fim do programa, volte sempre!");
+            finish_program = true;
             break;
             
         case 1: // Cadastro de produto
+            Product new_product = new Product();
+
             do {
                 Console.Write($"Informe o código: ");
                 code = Console.ReadLine();
@@ -45,37 +49,72 @@ do {
                     Console.WriteLine("Este código já existe, entre com um diferente!");
                     
                     flag = true;
+                } 
+                else {
+                    try {
+                        new_product.Code = code;
+                    } 
+                    catch (Exception error) {
+                        Console.WriteLine(error.Message);
+
+                        flag = true;
+                    }
                 }
             } while (flag);
             
+            do {
+                Console.Write($"Informe o nome: ");
+                name = Console.ReadLine();
+                flag = false;
 
-            // try {
-            //     product.setName(code);
-            // } 
-            // catch (ArgumentNullException ex) {
-            //     Console.WriteLine(ex.Message);
-            // }
+                try {
+                    new_product.Name = name;
+                } 
+                catch (Exception error) {
+                    Console.WriteLine(error.Message);
 
-            Console.Write($"Informe o nome: ");
-            name = Console.ReadLine();
+                    flag = true;
+                }
+            } while (flag);
+            
+            do {
+                Console.Write($"Informe a quantidade: ");
+                amount = int.Parse(Console.ReadLine());
+                flag = false;
 
-            Console.Write($"Informe a quantidade: ");
-            amount = int.Parse(Console.ReadLine());
+                try {
+                    new_product.Amount = amount;
+                } 
+                catch (Exception error) {
+                    Console.WriteLine(error.Message);
 
-            Console.Write($"Informe o preço: ");
-            price = double.Parse(Console.ReadLine());
+                    flag = true;
+                }
+            } while (flag);
 
-            product.Name = name;
-            product.Amount = amount;
-            product.Price = price;
-            product.Code = code;
+            do {
+                Console.Write($"Informe o preço: ");
+                price = double.Parse(Console.ReadLine());
+                flag = false;
 
-            products_list.Add(product);
+                try {
+                    new_product.Price = price;
+                } 
+                catch (Exception error) {
+                    Console.WriteLine(error.Message);
+
+                    flag = true;
+                }
+            } while (flag);
+
+            products_list.Add(new_product);
 
             Console.WriteLine($"\nEste produto foi cadastrado com sucesso!");
             break;
 
         case 2: // Consulta de produto
+            Product product = new Product();
+
             Console.Write($"Informe o código: ");
             code = Console.ReadLine();
 
@@ -94,89 +133,97 @@ do {
             break;
 
         case 3: // Atualização de estoque
-            Console.WriteLine($"Informe o código: ");
+            Product att_product = new Product();
+
+            Console.Write($"Informe o código: ");
             code = Console.ReadLine();
 
-            product = Utilities.getProductByCode(code, products_list);
+            att_product = Utilities.getProductByCode(code, products_list);
 
             try {
-                product = Utilities.getProductByCode(code, products_list);
+                att_product = Utilities.getProductByCode(code, products_list);
 
-                Console.WriteLine($"Informe a nova quantidade: ");
+                Console.Write($"Informe a nova quantidade: ");
                 amount = int.Parse(Console.ReadLine());
 
-                if ( amount > product.Amount ) {
+                Console.Write($"Informe se é entrada [1] ou saída [2] de itens: ");
+                io_amount = int.Parse(Console.ReadLine());
+
+                if ( amount > att_product.Amount && io_amount == 2 ) {
                     Console.WriteLine($"A quantidade fornecida é superior à quantidade presente em estoque.");
-                    
                 } else {
-                    product_index = products_list.IndexOf(product);
+                    product_index = products_list.IndexOf(att_product);
                     products_list[product_index].Amount = amount;
                     Console.WriteLine("Estoque do produto atualizado com sucesso!");
                 }
             } 
-            catch (InvalidOperationException er) {
+            catch (Exception er) {
                 Console.WriteLine($"Não existe produto com este código no estoque.");
             }
 
             break;
 
         case 4: // Relatórios
-            Console.WriteLine($@"Opções de relatório: ");
-            menu_options = new string[] {"Retornar ao menu principal",
-                            "Lista de produtos abaixo do estoque",
-                            "Lista de produtos com valores mínimo e máximo",
-                            "Valor total do estoque e valor total de cada produto"}
-                            .ToList();
+            if (Utilities.isAnyProduct(products_list))
+            {
+                menu_options = new string[] {"Retornar ao menu principal",
+                                "Lista de produtos abaixo do estoque",
+                                "Lista de produtos com valores mínimo e máximo",
+                                "Valor total do estoque e valor total de cada produto"}
+                                .ToList();
 
-            do {
-                Utilities.montarMenu(menu_options);
-                Console.Write($"\nSua opção: ");
-                user_option = int.Parse(Console.ReadLine());
+                do {
+                    Console.WriteLine($"\nOpções de relatório: ");
+                    Utilities.montarMenu(menu_options);
+                    Console.Write($"\nSua opção: ");
+                    user_option = int.Parse(Console.ReadLine());
 
-                switch (user_option)
-                {
-                    case 0:
-                        Console.WriteLine($"Retornando...");
-                        break;
-                        
-                    case 1:
-                        Console.WriteLine($"Informe a nova quantidade: ");
-                        amount = int.Parse(Console.ReadLine());
+                    switch (user_option)
+                    {
+                        case 0:
+                            Console.WriteLine($"Retornando...");
+                            break;
+                            
+                        case 1:
+                            Console.Write($"Informe o limite: ");
+                            amount = int.Parse(Console.ReadLine());
 
-                        Utilities.getProductsBelowLimit(amount, products_list);
+                            Utilities.getProductsBelowLimit(amount, products_list);
 
-                        break;
+                            break;
 
-                    case 2:
-                        Console.WriteLine($"Informe o mínimo: ");
-                        min_amount = int.Parse(Console.ReadLine());
+                        case 2:
+                            Console.Write($"Informe o mínimo: ");
+                            min_amount = int.Parse(Console.ReadLine());
 
-                        Console.WriteLine($"Informe o máximo: ");
-                        max_amount = int.Parse(Console.ReadLine());
+                            Console.Write($"Informe o máximo: ");
+                            max_amount = int.Parse(Console.ReadLine());
 
-                        Utilities.getProductsMinMax(min_amount, max_amount, products_list);
+                            Utilities.getProductsMinMax(min_amount, max_amount, products_list);
 
-                        break;
+                            break;
 
-                    case 3:
-                        Utilities.getTotalAmountAll(products_list);
+                        case 3:
+                            Utilities.getTotalAmountAll(products_list);
 
-                        break;
+                            break;
 
-                    default:
-                        Console.WriteLine($"Insira um valor entre 0 e {menu_options.Count}");
+                        default:
+                            Console.WriteLine($"Insira um valor entre 0 e {menu_options.Count}");
 
-                        break;
-                }
-                
-               
-            } while (user_option != 0);
+                            break;
+                    }
+                } while (user_option != 0);
+            }
+            else {
+                Console.WriteLine($"Não há produtos cadastrados para a realização de relatórios.");
+            }
 
-            break;    
+            break;
 
         default:
             Console.WriteLine($"Insira um número entre 0 e {menu_options.Count}");
             break;
     }
     Console.WriteLine(); // Quebrar linha por formatação
-} while (user_option != 0);
+} while (!finish_program);
