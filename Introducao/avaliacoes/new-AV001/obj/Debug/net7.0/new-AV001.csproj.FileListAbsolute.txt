@@ -1,0 +1,15 @@
+/home/nathalielima/residenciatic18_dotnet/Introducao/avaliacoes/new-AV001/obj/Debug/net7.0/new-AV001.csproj.AssemblyReference.cache
+/home/nathalielima/residenciatic18_dotnet/Introducao/avaliacoes/new-AV001/obj/Debug/net7.0/new-AV001.GeneratedMSBuildEditorConfig.editorconfig
+/home/nathalielima/residenciatic18_dotnet/Introducao/avaliacoes/new-AV001/obj/Debug/net7.0/new-AV001.AssemblyInfoInputs.cache
+/home/nathalielima/residenciatic18_dotnet/Introducao/avaliacoes/new-AV001/obj/Debug/net7.0/new-AV001.AssemblyInfo.cs
+/home/nathalielima/residenciatic18_dotnet/Introducao/avaliacoes/new-AV001/obj/Debug/net7.0/new-AV001.csproj.CoreCompileInputs.cache
+/home/nathalielima/residenciatic18_dotnet/Introducao/avaliacoes/new-AV001/bin/Debug/net7.0/new-AV001
+/home/nathalielima/residenciatic18_dotnet/Introducao/avaliacoes/new-AV001/bin/Debug/net7.0/new-AV001.deps.json
+/home/nathalielima/residenciatic18_dotnet/Introducao/avaliacoes/new-AV001/bin/Debug/net7.0/new-AV001.runtimeconfig.json
+/home/nathalielima/residenciatic18_dotnet/Introducao/avaliacoes/new-AV001/bin/Debug/net7.0/new-AV001.dll
+/home/nathalielima/residenciatic18_dotnet/Introducao/avaliacoes/new-AV001/bin/Debug/net7.0/new-AV001.pdb
+/home/nathalielima/residenciatic18_dotnet/Introducao/avaliacoes/new-AV001/obj/Debug/net7.0/new-AV001.dll
+/home/nathalielima/residenciatic18_dotnet/Introducao/avaliacoes/new-AV001/obj/Debug/net7.0/refint/new-AV001.dll
+/home/nathalielima/residenciatic18_dotnet/Introducao/avaliacoes/new-AV001/obj/Debug/net7.0/new-AV001.pdb
+/home/nathalielima/residenciatic18_dotnet/Introducao/avaliacoes/new-AV001/obj/Debug/net7.0/new-AV001.genruntimeconfig.cache
+/home/nathalielima/residenciatic18_dotnet/Introducao/avaliacoes/new-AV001/obj/Debug/net7.0/ref/new-AV001.dll
