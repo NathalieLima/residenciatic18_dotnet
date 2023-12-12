@@ -50,7 +50,8 @@ do {
                 {"náthalie Lima", "01/09/1987", "12345678901", "feminino", "Febre, Tosse, Cansaço"},
                 {"master santos", "03/22/1975", "98765432102", "masculino", "Dor de cabeça, Febre"},
                 {"Syndra Oliveira", "09/05/1992", "11122233303", "feminino", "Dor de garganta, Cansaço"},
-                {"volibear pereira", "32/10/1980", "55566677704", "masculino", "Perda de olfato ou paladar, Tosse"},
+                {"volibear pereira", "32/10/1980"
+                , "55566677704", "masculino", "Perda de olfato ou paladar, Tosse"},
                 {"Annie silva", "09/09/1965", "12345678902", "feminino", "Febre, Cansaço"}
             };
 

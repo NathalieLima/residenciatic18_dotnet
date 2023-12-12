@@ -13,18 +13,11 @@ class Pessoa
         get { return this.nome; }
         set
         {
-            
-            // Verificar se o nome recebido não é vazio ou nulo
-            if ( Utilities.isEmptyValue(value) ) {
-                throw new Exception($"Insira algum valor {value} que não seja vazio ou nulo.");
-            } else {
-                
-                
-                string formated_value = Utilities.capitalize(value.Trim());     
-                Console.WriteLine($"{value} | {formated_value}");           
+            string formated_value = Utilities.capitalize(value.Trim());     
+            Console.WriteLine($"{value} | {formated_value}");           
 
-                this.nome = formated_value;
-            }
+            this.nome = formated_value;
+            
         } 
     }
     
@@ -77,5 +70,12 @@ class Pessoa
         }
 
         return year_diff;
+    }
+
+    private void ValidateName(string value) {
+        // Verificar se o nome recebido não é vazio ou nulo
+        if ( Utilities.isEmptyValue(value) ) {
+            throw new Exception($"Insira algum valor {value} que não seja vazio ou nulo.");
+        } 
     }
 }
