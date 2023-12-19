@@ -1,1 +1,0 @@
-uma pessoa precisando de um serviço e outra oferecendo-o, tudo isso gratuitamente, a fim de cada um sair ganhando, seja recebendo o produto, seja produzindo experiência pessoal
