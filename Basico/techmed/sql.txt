@@ -1,0 +1,42 @@
+USE Atividades;
+
+CREATE TABLE IF NOT EXISTS Medico (
+codigo int AUTO_INCREMENT NOT NULL UNIQUE,
+nome varchar(50) NOT NULL,
+especialidade ENUM('cardiologia', 'pediatria', 'gastro') NOT NULL,
+salario double NOT NULL,
+PRIMARY KEY (codigo)
+);
+
+CREATE TABLE IF NOT EXISTS Paciente (
+cpf char(11) PRIMARY KEY NOT NULL UNIQUE,
+nome varchar(50) NOT NULL,
+endereco varchar(100),
+telefone varchar(13) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Consulta (
+numero int AUTO_INCREMENT PRIMARY KEY NOT NULL, 
+data_hora datetime NOT NULL,
+valor double NOT NULL,
+medico int NOT NULL,
+paciente int NOT NULL,
+PRIMARY KEY (numero),
+FOREIGN KEY (medico) REFERENCES Medico(codigo),
+FOREIGN KEY (paciente) REFERENCES Paciente(cpf)
+);
+
+CREATE TABLE IF NOT EXISTS Exame (
+codigo int AUTO_INCREMENT PRIMARY KEY NOT NULL,
+nome varchar(100) NOT NULL,
+tipo varchar(100) NOT NULL,
+preco double NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS ConsultasExames (
+consulta int NOT NULL,
+exame int NOT NULL,
+PRIMARY KEY(consulta, exame),
+FOREIGN KEY (consulta) REFERENCES Consulta(numero),
+FOREIGN KEY (exame) REFERENCES Exame(codigo)
+);
