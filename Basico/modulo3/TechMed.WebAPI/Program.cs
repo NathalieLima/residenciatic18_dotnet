@@ -1,9 +1,11 @@
+using Model.TechMed.WebAPI;
+
 var builder = WebApplication.CreateBuilder(args); // Criação da aplicação
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.Configure<OpeningTime>(builder.Configuration.GetSection("OpeningTime"));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -20,6 +22,6 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.MapControllers();
+app.MapControllers(); //lê todos os controllers da API e transforma lá
 
 app.Run();

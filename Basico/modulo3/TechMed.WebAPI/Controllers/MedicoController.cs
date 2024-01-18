@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Model.TechMed.WebAPI;
+using Microsoft.Extensions.Options;
 
 namespace TechMed.WebAPI.Controllers;
 
@@ -7,6 +8,13 @@ namespace TechMed.WebAPI.Controllers;
 [Route("[controller]")]
 public class MedicoController : ControllerBase
 {
+    private readonly IOptions<OpeningTime> _openingTime;
+    public MedicoController(IOptions<OpeningTime> openingTime)
+    {
+        _openingTime = openingTime;
+    }
+
+
     private static  string[] Summaries = new[]
     {
         "JC", "D", "ES", "Náthalie", "Ciro", "Lilívia" 
