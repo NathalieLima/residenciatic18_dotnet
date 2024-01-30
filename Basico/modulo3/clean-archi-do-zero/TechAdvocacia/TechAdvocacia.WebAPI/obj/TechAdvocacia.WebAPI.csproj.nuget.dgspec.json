@@ -1,0 +1,251 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.WebAPI/TechAdvocacia.WebAPI.csproj": {}
+  },
+  "projects": {
+    "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.Application/TechAdvocacia.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.Application/TechAdvocacia.Application.csproj",
+        "projectName": "TechAdvocacia.Application",
+        "projectPath": "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.Application/TechAdvocacia.Application.csproj",
+        "packagesPath": "/home/nathalielima/.nuget/packages/",
+        "outputPath": "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/nathalielima/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.Core/TechAdvocacia.Core.csproj": {
+                "projectPath": "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.Core/TechAdvocacia.Core.csproj"
+              },
+              "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.Infrastructure/TechAdvocacia.Infrastructure.csproj": {
+                "projectPath": "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.Infrastructure/TechAdvocacia.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.115/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.Core/TechAdvocacia.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.Core/TechAdvocacia.Core.csproj",
+        "projectName": "TechAdvocacia.Core",
+        "projectPath": "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.Core/TechAdvocacia.Core.csproj",
+        "packagesPath": "/home/nathalielima/.nuget/packages/",
+        "outputPath": "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/nathalielima/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.115/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.Infrastructure/TechAdvocacia.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.Infrastructure/TechAdvocacia.Infrastructure.csproj",
+        "projectName": "TechAdvocacia.Infrastructure",
+        "projectPath": "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.Infrastructure/TechAdvocacia.Infrastructure.csproj",
+        "packagesPath": "/home/nathalielima/.nuget/packages/",
+        "outputPath": "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/nathalielima/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.Core/TechAdvocacia.Core.csproj": {
+                "projectPath": "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.Core/TechAdvocacia.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.115/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.WebAPI/TechAdvocacia.WebAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.WebAPI/TechAdvocacia.WebAPI.csproj",
+        "projectName": "TechAdvocacia.WebAPI",
+        "projectPath": "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.WebAPI/TechAdvocacia.WebAPI.csproj",
+        "packagesPath": "/home/nathalielima/.nuget/packages/",
+        "outputPath": "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.WebAPI/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/nathalielima/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.Application/TechAdvocacia.Application.csproj": {
+                "projectPath": "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.Application/TechAdvocacia.Application.csproj"
+              },
+              "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.Infrastructure/TechAdvocacia.Infrastructure.csproj": {
+                "projectPath": "/home/nathalielima/clean-archi-do-zero/TechAdvocacia/TechAdvocacia.Infrastructure/TechAdvocacia.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.15, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.115/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cXgLmT1U1txA7Z4JAB+5sq7YhNhna2RzgP4Aj+xPZlc5gB1QkUYcSwgtMkfSvbtAJul9k0Ycu7WvdXDsjpEI/w==",
+  "dgSpecHash": "+6dlPkxcRdlIMlBTeVMi7nuEi1L6aYlWqns60Byqtjg8Y8vvUFchoCcs3CoUQM+Y5Xr2i3NB0kUz0EzMb0IgXg==",
   "success": true,
-  "projectFilePath": "/home/nathalielima/residenciatic18_dotnet/tic18_dotnet/ExemplosAula/Modulo3/TechMed.WebAPI/TechMed.WebAPI.csproj",
+  "projectFilePath": "/home/nathalielima/residenciatic18_dotnet/Basico/modulo3/TechMed.WebAPI-Database/TechMed.WebAPI.csproj",
   "expectedPackageFiles": [
     "/home/nathalielima/.nuget/packages/microsoft.aspnetcore.openapi/7.0.15/microsoft.aspnetcore.openapi.7.0.15.nupkg.sha512",
     "/home/nathalielima/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

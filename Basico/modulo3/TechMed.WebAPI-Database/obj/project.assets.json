@@ -474,11 +474,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/nathalielima/residenciatic18_dotnet/tic18_dotnet/ExemplosAula/Modulo3/TechMed.WebAPI/TechMed.WebAPI.csproj",
+      "projectUniqueName": "/home/nathalielima/residenciatic18_dotnet/Basico/modulo3/TechMed.WebAPI-Database/TechMed.WebAPI.csproj",
       "projectName": "TechMed.WebAPI",
-      "projectPath": "/home/nathalielima/residenciatic18_dotnet/tic18_dotnet/ExemplosAula/Modulo3/TechMed.WebAPI/TechMed.WebAPI.csproj",
+      "projectPath": "/home/nathalielima/residenciatic18_dotnet/Basico/modulo3/TechMed.WebAPI-Database/TechMed.WebAPI.csproj",
       "packagesPath": "/home/nathalielima/.nuget/packages/",
-      "outputPath": "/home/nathalielima/residenciatic18_dotnet/tic18_dotnet/ExemplosAula/Modulo3/TechMed.WebAPI/obj/",
+      "outputPath": "/home/nathalielima/residenciatic18_dotnet/Basico/modulo3/TechMed.WebAPI-Database/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/nathalielima/.nuget/NuGet/NuGet.Config"
